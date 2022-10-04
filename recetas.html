@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="./imagenes/Logo_tenedor.png">
+    <title>La Cucina de Anush</title>
+</head>
+<body>
+    <header class="main_header">
+        <div class="main_header_logo"></div>
+        <div>
+            <nav class="main_header_nav">
+                <ul class="main_header_nav_ul">
+                    <li><a href="index.html" class="main_header_nav_boton">Inicio</a></li>  
+                    <li><a href="tragos.html" class="main_header_nav_boton">Tragos</a></li>
+                    <li><a href="productos.html"class="main_header_nav_boton">Productos</a></li>
+                    <li><a href="promociones.html"class="main_header_nav_boton">Promociones</a></li>
+                    <li><a href="pedidos.html"class="main_header_nav_boton">Pedidos</a></li>
+                    <li><a href="recetas.html"class="nav_color_ubicacion">Recetas</a></li>
+                    <li><a href="clientes.html"class="main_header_nav_boton">Clientes</a></li>
+                    <li><a href="contacto.html"class="main_header_nav_boton">Contacto</a></li>                            
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="formularioRecetas"> 
+            <!-- <h1 class="main_principal_wapper_titulo">~ Recetas con Pastas ~</h1> -->
+            <form id="elijoPasta">
+                <label for="">Elijo el Tipo de Pasta</label>
+                <select name="pastas" id="tipoPasta">
+                    <option value="1">Ñoquis</option>
+                    <option value="2">Fideos</option>
+                    <option value="3">Sorrentinos</option>
+                </select>
+                <!-- <input type="text" id="tipoPasta"> -->
+                <button type="submit" class="form-button">Elegir</button>
+            </form>
+        </div>
+    </main>
+    <section id="mostrarRecetas">
+        <div id="carrousel">
+            <div id="botones">
+<!--                 <button id="buttonUno" class="boton active color_claro" onclick="elijoRecetaNoquis(1)">Receta Nro 1</button>
+                <button id="buttonDos" class="boton color_claro" onclick="elijoRecetaNoquis(2)">Receta Nro 2</button>
+                <button id="buttonTres" class="boton color_claro"  onclick="elijoRecetaNoquis(3)">Receta Nro 3</button> -->
+            </div>
+            <div id="contenedorTextosCarrousel"> 
+                <div id="recetaTitulo">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TRBLXiL1QX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <img src="./imagenes/recetasnioquis.gif"> -->
+                </div>
+                <div id="recetaImagen"></div>
+                <div id="recetaIngredientes"></div>
+                <div id="recetaPasoaPaso"></div>
+            </div>   
+        </div>
+    </section>
+    <footer class="main_footer">
+        <div>
+            <img src="./imagenes/copyright.svg" class="main_footer_copyright" alt="copyright">
+        </div>
+        <div class="main_footer_persona">
+            <p>~ Ana Inés Kessler ~ 2022</p>
+        </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/recetas.js"></script>
+</body>
+</html>

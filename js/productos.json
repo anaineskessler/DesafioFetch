@@ -1,0 +1,12 @@
+[
+{"id": 9,"nombre":"Ravioles", "precio": 1200 , "stock": 20, "vencimiento": "05/10/2022","imagen": "./imagenes/catalogoRavioles.jpg"},
+{"id": 10,"nombre":"Fideos", "precio": 800, "stock": 10, "vencimiento": "05/10/2022","imagen":"./imagenes/catalogofideo.jpg"},
+{"id": 11,"nombre":"Ñoquis", "precio": 650, "stock": 10, "vencimiento": "08/10/2022","imagen":"./imagenes/catalogoNioquis.jpg"},
+{"id": 12,"nombre":"Sorrentinos", "precio": 1400, "stock": 25, "vencimiento": "15/10/202","imagen": "./imagenes/catalogoSorrentinos.jpg"},
+{"id": 13,"nombre":"Agnolotis", "precio": 1550, "stock":30 , "vencimiento": "05/10/2022","imagen": "./imagenes/catalogoAgnolotis.jpg"},
+{"id": 14,"nombre":"Fideos rellenos", "precio": 1320, "stock": 28, "vencimiento": "25/11/2022","imagen": "./imagenes/catalogofideosrellenos.jpg"},
+{"id": 15,"nombre":"Tirabuzón", "precio": 850, "stock":40 , "vencimiento": "15/11/2022","imagen": "./imagenes/catalogoTirabuzon.jpg"},
+{"id": 16,"nombre":"Lasagna", "precio": 1420, "stock": 30, "vencimiento": "25/11/2022","imagen": "./imagenes/catalogoLasagna.jpg"},
+{"id": 17,"nombre":"Ñoquis a la Romana", "precio": 950, "stock": 18, "vencimiento": "12/10/2022","imagen": "./imagenes/catalogoNioquisSemola.jpg"},
+{"id": 18,"nombre":"Tallarines", "precio": 600, "stock": 5, "vencimiento": "22/11/2022","imagen": "./imagenes/catalogoTallarines.jpg"}
+]

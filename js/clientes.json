@@ -1,0 +1,10 @@
+[
+    {"nombre":"Mariana Perez", "direccion":"Rivadavia 45","localidad": "Morón","telefono": "0114654-6542"},
+    {"nombre":"Gonzalo Ríos", "direccion":"Concordia 42","localidad":"CABA","telefono": "0115588-78542"},
+    {"nombre":"Sandra Bertolo","direccion": "Leones 34","localidad":"Morón","telefono": "0113654-8956"},
+    {"nombre":"Andres Suarez","direccion": "Figueroa 24","localidad":"CABA","telefono": "0115652-5544"},
+    {"nombre":"Marisol Herrera", "direccion": "Rivadavia 1234", "localidad": "Morón", "telefono": "0112548-5412"},
+    {"nombre":"Andres Marquez","direccion": "Paso 114","localidad":"CABA","telefono": "0115752-5544"},
+    {"nombre":"Andrea Juarez","direccion": "Ayacucho 24","localidad":"CABA","telefono": "0114452-5440"},
+    {"nombre":"Adriana Gomez","direccion": "Bulnes 24","localidad":"Morón","telefono": "0119652-5784"}
+]

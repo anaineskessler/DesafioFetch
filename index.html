@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="./imagenes/Logo_tenedor.png">
+    <title>La Cucina de Anush</title>
+</head>
+<body>
+    <header class="main_header">
+        <div class="main_header_logo">
+            <!-- <a href="index.html"><img src="./imagenes/CucinaAnushEncabezado.png"/></a> -->
+        </div>
+        <div>
+            <nav class="main_header_nav">
+                <ul class="main_header_nav_ul">
+                    <li><a href="index.html" class="nav_color_ubicacion">Inicio</a></li>  
+                    <li><a href="tragos.html" class="main_header_nav_boton">Tragos</a></li>
+                    <li><a href="productos.html"class="main_header_nav_boton">Productos</a></li>
+                    <li><a href="promociones.html"class="main_header_nav_boton">Promociones</a></li>
+                    <li><a href="pedidos.html"class="main_header_nav_boton">Pedidos</a></li>
+                    <li><a href="recetas.html"class="main_header_nav_boton">Recetas</a></li>
+                    <li><a href="clientes.html"class="main_header_nav_boton">Clientes</a></li>
+                    <li><a href="contacto.html"class="main_header_nav_boton">Contacto</a></li>                            
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main_principal">
+        <div class="main_principal_container"> 
+            <div class="main_principal_wapper">
+                <img src="./imagenes/pasta7.jpg" alt="pastas">    
+            </div>
+            <div class="main_principal_wapper">                
+                <h1 class="main_principal_wapper_titulo">~ INCORPORANDO FETCH ~</h1>
+                <br>
+                <hr>
+                <br>
+                <p><b>CLIENTES:</b></p>
+                        <li>Se creó el archivo clientes.json.</li>
+                <br>
+                <hr>
+                <p><b>PRODUCTOS y PEDIDOS:</b></p>
+                    <li>Se creó el archivo productos.json y se llamó desde las dos páginas</li>
+                <br>   
+                <hr>
+                <p><b>CONTACTO:</b></p>
+                    <li>Se utilizó una API para el formulario de contacto, que almacena y envía los mails a la casilla desingada</li>
+                    
+                <br>
+            </div>
+        </div>
+        
+    </main>
+    <footer class="main_footer">
+        <div>
+            <img src="./imagenes/copyright.svg" class="main_footer_copyright" alt="copyright">
+        </div>
+        <div class="main_footer_persona">
+            <p>~ Ana Inés Kessler ~ 2022</p>
+        </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
