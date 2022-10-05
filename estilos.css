@@ -482,5 +482,10 @@ label {
 
 #recetasInternac {
     width: auto;
-    height: 500px;
+    height: 1600px;
+}
+
+.imagenTragos {
+    width: 150px;
+    height: auto;
 }
