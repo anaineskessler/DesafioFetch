@@ -12,6 +12,8 @@ class Recetas {
 
 const listaRecetas = [];
 
+// CREACIÓN DEL ARRAY DE LAS RECETAS
+
 listaRecetas.push (new Recetas("Ñoquis","Ñoquis de papa con salsa Chedar, panceta crocante y verdeo",'./imagenes/nioquis-receta1.jpg',`1 paquete de Ñoquis de Papa La Italiana x 500 gr // 120 gr de panceta ahumada // 2 plantas de cebolla de verdeo // 400 gr de crema de leche // 200 gr de queso tipo cheddar // Aceite de oliva // Sal y pimienta`,"Dorar la panceta cortada en bastones finos en un poco de aceite y reservar. Lavar y picar en rodajas muy finas la cebolla de verdeo. Llevar a fuego fuerte la crema, una vez que rompe hervor  apagar el fuego, agregar el queso picado, dejar unos minutos que se funda y revolver bien para integrar todo el queso a la crema. Cocinar los Ñoquis de Papa La Italiana siguiendo las indicaciones del envase, colar y juntar con la salsa de cheddar y la panceta, servir y terminar por arriba con la cebolla de verdeo picada en crudo. VARIANTE: siguiendo el mismo proceso pero reemplazando el queso cheddar por queso gruyere obtenemos una crema de queso picante muy interesante."));
 listaRecetas.push (new Recetas("Ñoquis",`Ñoquis de papa con crema de parmesano, jamón crudo y rúcula`,'./imagenes/nioquis-receta2.jpg','1 paquete de Ñoquis de Papa La Italiana x 500 gr // 400 gr de crema // 200 gr de parmesano  // 100 gr de jamón crudo // ½ atado de rúcula lavada // Aceite de oliva // Sal y pimienta',"Llevar a hervor la crema, apagar el fuego y sumar el queso rallado, dejar reposar unos minutos y mixear para homogeneizar la salsa. Cocinar los Ñoquis de Papa La Italiana siguiendo las indicaciones del envase, colar y unir en la olla donde tenemos la crema de queso. Sumar a la olla la mitad del jamón crudo desmenuzado y la mitad de las hojas de rúcula, cocinar dos minutos y servir. Terminar por arriba con el resto del jamón crudo y la rúcula fresca, condimentar con pimienta recién molida y aceite de oliva."));
 listaRecetas.push (new Recetas("Ñoquis","Alitas de pollo al jengibre con ñoquis al pesto",'./imagenes/nioquis-receta3.jpg',"Ñoquis de papa La Italiana x 500 gr. // Miel 2 cdas // Jugo de naranja 50cc // Ralladura de naranja 1 cda // / Salsa de soja 4 cdas // Aceite de oliva 3 chas // Jengibre Fresco Rallado 2 cda // Ajo Picados 3 dientes // Cebollas moradas 2 unidades // Pimienta Negra Molida // Alas De pollo 12 unidades // Perejil picado // Ajo 1 diente // Aceite de oliva // Maní tostado 40 gr.","En un bow , batir la miel, el jugo de naranja, la ralladura de la cáscara, la salsa de soja, el aceite , el jengibre rallado, el ajo, y las cebollas picadas bien pequeñas, con ¼ de cucharadita de sal y ¼ de cucharadita de pimienta. Verter la marinada en una bolsa para horno. Poner las alitas en la bolsa y cerrar.  Marinar en el refrigerador durante al menos 2 horas, pero preferiblemente durante toda la noche. Retira las alas de pollo del refrigerador y colocarlas en una bandeja de horno. Cocinar a 200° hasta que se vean doradas aproximadamente 45 min. En un mixer colocar el perejil, el ajo y el aceite. Mixear y luego añadir esta salsa a los ñoquis cocidos y calientes. Por ultimo esparcir los maníes tostados y picados."));
@@ -32,14 +34,13 @@ let recetaPasoaPaso=document.querySelector("#recetaPasoaPaso");
 
 function buscoRecetas(tipoPasta,listaRecetas) {
     let listadoRecetas = [];
-    console.log(tipoPasta);
+    // console.log(listaRecetas);
+    // console.log(tipoPasta);
     switch(tipoPasta) {
         case 1:
-            console.log("pase1");
             listadoRecetas=listaRecetas.filter(item => item.principal ==="Ñoquis");
             break;
         case 2:
-            console.log("pase2");
             listadoRecetas=listaRecetas.filter(item => item.principal === "Fideos");
             console.log(listadoRecetas);
             break;
@@ -54,12 +55,9 @@ function buscoRecetas(tipoPasta,listaRecetas) {
 function elijoReceta(nro,pastaTipo,listar){
     // console.log(listar);
     const listadoReceta=buscoRecetas(parseInt(pastaTipo),listar);
-    console.log(listadoReceta);
-    console.log(nro);
     switch(nro) {
         case 1:
             recetaTitulo.innerHTML=`<h3 class="color_marron"> ${listadoReceta[0].titulo}</h3> <br> <hr>`;
-            // recetaImagen.innerHTML=` <img class="recetaImagen" src="./imagenes/nioquis-receta1.jpg" alt="ñoquis receta1">`
             recetaImagen.innerHTML=`<img class="receta_Imagen" src= ${listadoReceta[0].imagen}  alt='receta1'>`;
             recetaIngredientes.innerHTML=`<h2 class="color_marron">Ingredientes</h2> <br> <p class="texto_recetas"> ${listadoReceta[0].ingredientes}</p>`;
             recetaPasoaPaso.innerHTML=`<br> <h2 class="color_marron">Procedimiento</h2> <br><p class="texto_recetas"> ${listadoReceta[0].proceso}</p>`;
@@ -69,7 +67,6 @@ function elijoReceta(nro,pastaTipo,listar){
             break;
         case 2:
             recetaTitulo.innerHTML=`<h3 class="color_marron"> ${listadoReceta[1].titulo}</h3> <br> <hr>`;
-            // recetaImagen.innerHTML=` <img class="receta_Imagen" src="./imagenes/nioquis-receta2.jpg" alt="ñoquis receta2">`;
             recetaImagen.innerHTML=`<img class="receta_Imagen" src= ${listadoReceta[1].imagen}  alt='receta2'>`;
             recetaIngredientes.innerHTML=`<h2 class="color_marron">Ingredientes</h2> <br> <p class="texto_recetas"> ${listadoReceta[1].ingredientes}</p>`;
             recetaPasoaPaso.innerHTML=`<br> <h2 class="color_marron">Procedimiento</h2> <br><p class="texto_recetas"> ${listadoReceta[1].proceso}</p>`;
@@ -79,7 +76,6 @@ function elijoReceta(nro,pastaTipo,listar){
             break;
         case 3:
             recetaTitulo.innerHTML=`<h3 class="color_marron"> ${listadoReceta[2].titulo}</h3> <br> <hr>`;
-            // recetaImagen.innerHTML=` <img class="recetaImagen" src="./imagenes/nioquis-receta3.jpg" alt="ñoquis receta3">`;
             recetaImagen.innerHTML=`<img class="receta_Imagen" src= ${listadoReceta[2].imagen}  alt='receta3'>`;
             recetaIngredientes.innerHTML=`<h2 class="color_marron">Ingredientes</h2> <br> <p class="texto_recetas"> ${listadoReceta[2].ingredientes}</p>`;
             recetaPasoaPaso.innerHTML=`<br> <h2 class="color_marron">Procedimiento</h2> <br><p class="texto_recetas"> ${listadoReceta[2].proceso}</p>`;
@@ -92,22 +88,24 @@ function elijoReceta(nro,pastaTipo,listar){
     }
 }
 
+// SELECCIÓN DEL TIPO DE PASTA PARA HABILITAR BOTONES ESPECÍFICOS
+
 function fnPastas(nro) {
     switch (parseInt(nro)) {
         case 1:
-            console.log("pasta1");
+            //console.log("pasta1");
             botones.innerHTML= `<button id="buttonUno" class="boton active color_claro" onclick="elijoReceta(1,${nro},listaRecetas)">Ñoquis Receta Nro 1</button>
             <button id="buttonDos" class="boton color_claro" onclick="elijoReceta(2,${nro},listaRecetas)">Ñoquis Receta Nro 2</button>
             <button id="buttonTres" class="boton color_claro"  onclick="elijoReceta(3,${nro},listaRecetas)">Ñoquis Receta Nro 3</button>`;
             break;
         case 2:
-            console.log("pasta2");
+            //console.log("pasta2");
             botones.innerHTML= `<button id="buttonUno" class="boton active color_claro" onclick="elijoReceta(1,${nro},listaRecetas)">Fideos Receta Nro 1</button>
             <button id="buttonDos" class="boton color_claro" onclick="elijoReceta(2,${nro},listaRecetas)">Fideos Receta Nro 2</button>
             <button id="buttonTres" class="boton color_claro"  onclick="elijoReceta(3,${nro},listaRecetas)">Fideos Receta Nro 3</button>`;
             break;
         case 3:
-            console.log("pasta3");
+            //console.log("pasta3");
             botones.innerHTML= `<button id="buttonUno" class="boton active color_claro" onclick="elijoReceta(1,${nro},listaRecetas)">Sorrentinos Receta Nro 1</button>
             <button id="buttonDos" class="boton color_claro" onclick="elijoReceta(2,${nro},listaRecetas)">Sorrentinos Receta Nro 2</button>
             <button id="buttonTres" class="boton color_claro"  onclick="elijoReceta(3,${nro},listaRecetas)">Sorrentinos Receta Nro 3</button>`;
@@ -117,11 +115,11 @@ function fnPastas(nro) {
     }
 }
 
-function recogeDatos(evento) {
+function recogeDatos(evento,listaRecetas) {
     evento.preventDefault();
     let tipoPasta = document.querySelector("#tipoPasta").value;
-    console.log(tipoPasta);
-    fnPastas(tipoPasta);
+    //console.log(tipoPasta);
+    fnPastas(tipoPasta,listaRecetas);
 }
 
 let botones=document.querySelector("#botones");

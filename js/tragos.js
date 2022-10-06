@@ -1,4 +1,6 @@
-let recetasInternac = document.getElementById("recetasInternac");
+let recetasInternac = document.getElementById("tragosInternac");
+
+//TRAEMOS LA LIBRERÍA DE LOS TRAGOS Y LOS MOSTRAMOS
 
 const listaTragos = async () => {
 try {
@@ -11,13 +13,14 @@ try {
     
     tragosElegidos.forEach(tragos => {
         const div = document.createElement("div");
-
+        let ingredientes="";
+        let nro=1;
         div.innerHTML = `
         <h3 class= "color_marron_sm">Código: ${tragos.idDrink}</h3>
         <p><b>Categoría:</b> ${tragos.strCategory}</p>        
         <p><b>Nombre:</b> ${tragos.strDrink}</p>    
         <img class= "imagenTragos" src="${tragos.strDrinkThumb}">
-        <p><b>Ingredientes:</b> ${tragos.strIngredient1}, ${tragos.strIngredient2}, ${tragos.strIngredient3}, ${tragos.strIngredient4}, ${tragos.strIngredient5}, ${tragos.strIngredient6}, ${tragos.strIngredient7} </p>
+        <p><b>Ingredientes:</b> ${tragos.strIngredient1}, ${tragos.strIngredient2}, ${tragos.strIngredient3} </p>
         <br>
         <hr/>
         `;

@@ -132,7 +132,25 @@ main{
     width: 100vw;
     justify-content: space-around;
 }
-  
+.main_principal_container {
+    width: auto;
+    height: 300px;
+}
+
+.main_principal_container_contacto{
+    display: flex;
+    align-items: center;
+    height: 600px;
+    width: 100vw;
+    justify-content: space-around;
+}
+.main_principal_container_inicio{
+display: flex;
+align-items: center;
+height: 500px;
+width: 100vw;
+justify-content: space-around;
+}
 #mostrarRecetas {
     background-color: #ffffe6;
     width: 100%;
@@ -143,7 +161,8 @@ main{
     display: flex;
     /* justify-content: space-around; */
     flex-direction: column;
-    width: 500px;
+    width: 800px;
+    font-size: 12px;
 }
 .main_principal_promociones{
     overflow: hidden;
@@ -152,7 +171,7 @@ main{
     /* justify-content: space-around; */
     flex-direction: column;
     width: 100%;
-    height: 100px;
+    height: 800px;
 }
 .main_principal_wapper_titulo{
     font-family: 'Work Sans Medium';
@@ -257,6 +276,14 @@ main{
     width: 25px;
     height: auto;
 }
+
+.main_footer_coderhouse {
+    padding-top: -150px;
+    padding-left: 10px;
+    width: 100px;
+    height: auto;
+}
+
 .main_footer_persona{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -458,7 +485,7 @@ label {
 .color_marron_sm {
     font-style: Small;
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
     font-family: "Work Sans Bold", Verdana, sans-serif;
     font-weight: 200;
     line-height: 1.2;
@@ -480,7 +507,7 @@ label {
     background-color: #ffffe6;;
 }
 
-#recetasInternac {
+#tragosInternac {
     width: auto;
     height: 1600px;
 }
@@ -489,3 +516,60 @@ label {
     width: 150px;
     height: auto;
 }
+
+/* Estilos Promociones */
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Item {
+    width: 330px;
+    height: 460px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Item:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Item img{
+    height: 180px;
+    margin: 10px
+}
+
+.Item h4{
+    font-weight: 300;
+    font-size: 28px;
+    margin: 15px
+}
+
+.green{
+    color: rgb(7, 71, 7) !important
+  }
+  
+  .red{
+    color: rgb(133, 10, 10) !important
+  }
+
+.cardContainer{
+    width: auto;
+    height: 600px;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

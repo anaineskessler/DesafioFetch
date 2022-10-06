@@ -7,27 +7,17 @@ class Productos {
     }
 }
 let catalogoStorage = [];
-let listaproductos = [];
 //localStorage.clear();   // vacio localStorage
 
 // Inicialización de Variables
-function productosBase() {
-    fetch("./js/productos.json")
-    .then(response=>response.json())
-    .then( data => {
-        data.forEach(baseproducto => {
-        console.log("HOLA");
-        listaproductos.push (new Productos(baseproducto.nombre,baseproducto.precio,baseproducto.stock,baseproducto.vencimiento));
-    });
-    localStorage.setItem("catalogo",JSON.stringify(listaproductos));        
-    catalogoStorage=JSON.parse(localStorage.getItem("catalogo"));
-    })
-/*     listaproductos.push (new Productos('ravioles',  1200,  10,  '12/05/2022'));
+/* function productosBase() {
+    let listaproductos = [];
+    listaproductos.push (new Productos('ravioles',  1200,  10,  '12/05/2022'));
     listaproductos.push (new Productos('agnolotis', 1800,  20, '12/05/2022'));
     listaproductos.push (new Productos('fideos',  900,  14,  '11/05/2022'));
     listaproductos.push (new Productos('ñoquis', 800,  30,  '11/05/2022'));
-    listaproductos.push (new Productos('sorrentinos',  1400,  8, '12/05/2022')); */
-}
+    listaproductos.push (new Productos('sorrentinos',  1400,  8, '12/05/2022'));
+} */
 
 cargarCatalogo();
 
@@ -179,13 +169,23 @@ function cargarCatalogo() {
     console.log("ENTRE A CARGAR");
     if (localStorage.length > 0) {
         catalogoStorage=JSON.parse(localStorage.getItem("catalogo"));
+
+
+        // renderizar innerhtml  foreach!!!!!!!!!!!!!!!!   para que se generere denuevo el carrito y el catalogo
+ 
+
         //listaproductos=catalogoStorage;
         console.log("cargaCatalogoStorage");
         console.log(catalogoStorage);
     } else {
-        console.log("Estaba vacio LocalStorage");
-        productosBase();
-
+        //productosBase();
+        catalogoStorage.push (new Productos('ravioles',  1200,  10,  '12/05/2022'));
+        catalogoStorage.push (new Productos('agnolotis', 1800,  20, '12/05/2022'));
+        catalogoStorage.push (new Productos('fideos',  900,  14,  '11/05/2022'));
+        catalogoStorage.push (new Productos('ñoquis', 800,  30,  '11/05/2022'));
+        catalogoStorage.push (new Productos('sorrentinos',  1400,  8, '12/05/2022'));
+        localStorage.setItem("catalogo",JSON.stringify(catalogoStorage));
+        catalogoStorage=JSON.parse(localStorage.getItem("catalogo"));
         console.log("cargaCatalogoLocal");
         //console.log(listaproductos);
         console.log(catalogoStorage);
